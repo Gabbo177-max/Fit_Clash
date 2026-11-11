@@ -1,0 +1,102 @@
+    
+    <!DOCTYPE html>
+    <html lang='it'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Fit Clash | Login</title>
+        <link rel='stylesheet' href='Login.css'>
+        
+    </head>
+
+    <body>
+        <!-- SFONDO PREMIUM: Rumore e Canvas Scintille -->
+        <div class="noise-overlay"></div>
+        <canvas id="sparksCanvas"></canvas>
+        <main class='login-container'>
+
+            <div class='login-card'>
+                <div class="error-message" style="color: #ff4d4d; background: rgba(255,77,77,0.1); padding: 10px; border-radius: 6px; margin-bottom: 20px; text-align: center; font-size: 13px; display: none;">
+                    Credenziali non valide. Riprova.
+                </div>
+                <div class='logo'>
+                    <span class='logo-icon'>FC</span>
+                    <h1>FIT <span>CLASH</span></h1>
+                </div>
+
+                <div class='welcome'>
+                    <h2>Bentornato!</h2>
+                    <p>Accedi e continua a superare i tuoi limiti.</p>
+                </div>
+
+                <form action='Home.php' method='POST'>
+
+                    <div class='input-group'>
+                        <label for='email'>Email</label>
+                        <input
+                            type='email'
+                            id='email'
+                            name='email'
+                            placeholder='Inserisci la tua email'
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+
+                        <div class="password-container">
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Password"
+                                required
+                            >
+
+                            <button type="button" id="togglePassword" aria-label="Mostra password" aria-pressed="false">
+                                <span id="eyeIcon" aria-hidden="true">◉</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class='options'>
+                        <label class='remember'>
+                            <input type='checkbox' name='remember'>
+                            <span>Ricordami</span>
+                        </label>
+
+                        <a href='#'>Password dimenticata?</a>
+                    </div>
+
+                    <button type='submit' class='login-button'>
+                        ACCEDI
+                        <span>→</span>
+                    </button>
+                </form>
+
+                <div class='separator'>
+                    <span>OPPURE</span>
+                </div>
+
+                <p class='register'>
+                    Non hai ancora un account?
+                    <a href='Registrazione.php'>Registrati</a>
+                </p>
+
+                <div class='footer'>
+                    <p>© 2026 FIT CLASH - PUSH YOUR LIMITS</p>
+                </div>
+
+            </div>
+ 
+            <div class='side-text'>
+                <span class='orange-line'></span>
+                <h2>YOUR ONLY<br>LIMIT IS <span>YOU.</span></h2>
+                <p>Allenati. Competi. Migliorati.</p>
+            </div>
+
+        </main>
+        <script src="Login.js"></script>
+    </body>
+    </html>

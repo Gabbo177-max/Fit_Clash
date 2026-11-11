@@ -1,0 +1,455 @@
+
+/* RESET GENERALE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111111;
+    color: #eeeeee;
+    min-height: 100vh;
+}
+
+
+/* CONTENITORE PRINCIPALE */
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 40px 20px;
+}
+
+
+/* SCHEDA LOGIN */
+
+.login-card {
+    width: 420px;
+    background-color: #1c1c1c;
+    padding: 45px 40px;
+    border: 1px solid #303030;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.logo-icon {
+    background-color: #e87924;
+    color: #111111;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 9px;
+}
+
+.logo h1 {
+    font-size: 27px;
+    letter-spacing: 2px;
+    color: #eeeeee;
+}
+
+.logo h1 span {
+    color: #e87924;
+}
+
+
+/* TESTO DI BENVENUTO */
+
+.welcome {
+    margin-bottom: 30px;
+}
+
+.welcome h2 {
+    font-size: 28px;
+    margin-bottom: 9px;
+}
+
+.welcome p {
+    color: #929292;
+    font-size: 14px;
+}
+
+
+/* CAMPI INPUT */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 9px;
+    color: #dddddd;
+}
+
+.input-group input {
+    height: 48px;
+    padding: 0 15px;
+    background-color: #292929;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input::placeholder {
+    color: #777777;
+}
+
+.input-group input:focus {
+    border-color: #e87924;
+    box-shadow: 0 0 0 3px rgba(232, 121, 36, 0.10);
+}
+
+
+/* OPZIONI */
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    font-size: 12px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #aaaaaa;
+    cursor: pointer;
+}
+
+.remember input {
+    accent-color: #e87924;
+}
+
+.options a {
+    color: #e87924;
+    text-decoration: none;
+}
+
+.options a:hover {
+    color: #ff9b50;
+}
+
+
+/* PULSANTE LOGIN */
+
+.login-button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e87924;
+    color: #151515;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.login-button span {
+    font-size: 20px;
+}
+
+.login-button:hover {
+    background-color: #f18b3c;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(232, 121, 36, 0.2);
+}
+
+
+/* SEPARATORE */
+
+.separator {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+    color: #666666;
+    font-size: 11px;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #383838;
+}
+
+
+/* REGISTRAZIONE */
+
+.register {
+    text-align: center;
+    color: #929292;
+    font-size: 13px;
+}
+
+.register a {
+    color: #e87924;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 3px;
+}
+
+.register a:hover {
+    color: #ff9b50;
+    text-decoration: underline;
+}
+
+
+/* FOOTER */
+
+.footer {
+    border-top: 1px solid #333333;
+    margin-top: 35px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer p {
+    color: #666666;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+
+/* TESTO DECORATIVO LATERALE */
+
+.side-text {
+    max-width: 380px;
+}
+
+.orange-line {
+    display: block;
+    width: 55px;
+    height: 4px;
+    background-color: #e87924;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+.side-text h2 {
+    font-size: 53px;
+    line-height: 1.15;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.side-text h2 span {
+    color: #e87924;
+}
+
+.side-text p {
+    color: #858585;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .login-container {
+        gap: 0;
+    }
+
+    .side-text {
+        display: none;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .login-container {
+        padding: 20px 15px;
+    }
+
+    .login-card {
+        width: 100%;
+        padding: 35px 23px;
+    }
+
+    .welcome h2 {
+        font-size: 25px;
+    }
+
+}
+
+/* ANIMAZIONE INIZIALE */
+
+.login-card {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.side-text {
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* LOGO */
+
+.logo-icon {
+    transition: 0.3s ease;
+}
+
+.logo-icon:hover {
+    box-shadow: 0 0 20px rgba(232, 121, 36, 0.5);
+    transform: scale(1.08);
+}
+
+
+/* PASSWORD */
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 45px;
+}
+
+.password-container button {
+    position: absolute;
+    right: 12px;
+    background: transparent;
+    border: none;
+    color: #e87924;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+
+/* ANIMAZIONE DEL PULSANTE */
+
+.login-button:active {
+    transform: scale(0.97);
+}
+
+
+/* ACCESSIBILITÀ */
+
+@media (prefers-reduced-motion: reduce) {
+    .login-card,
+    .side-text {
+        animation: none;
+    }
+
+    * {
+        scroll-behavior: auto !important;
+    }
+}
+/* =========================================
+   SFONDO ANIMATO PREMIUM - SCINTILLE & NOISE
+   ========================================= */
+
+/* Livello 1: Il Canvas dove vengono disegnate le scintille */
+#sparksCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2; /* Dietro a tutto */
+    /* Sfondo sfumato radiale: più chiaro al centro, nero profondo ai bordi */
+    background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%);
+}
+
+/* Livello 2: Texture "Noise" (Rumore fotografico) per un effetto matte elegante */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Impedisce che blocchi i click sul form */
+    z-index: -1; /* Tra il canvas e la card del login */
+    opacity: 0.04; /* Sottilissimo, quasi impercettibile ma fa la differenza */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111111;
+    color: #eeeeee;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    isolation: isolate;
+}
+
+#sparksCanvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.noise-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.04;
+}
